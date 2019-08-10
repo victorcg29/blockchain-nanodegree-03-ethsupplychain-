@@ -158,7 +158,7 @@ contract('SupplyChain', function(accounts) {
         })
 
         // Mark an item as ForSale by calling function sellItem()
-        await supplyChain.ForSale(upc, productPrice, {from: originFarmerID})
+        await supplyChain.sellItem(upc, productPrice, {from: originFarmerID})
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc)
@@ -236,7 +236,7 @@ contract('SupplyChain', function(accounts) {
         })
 
         // Mark an item as Sold by calling function shipItem()
-        await supplyChain.shipItem(upc);
+        await supplyChain.shipItem(upc, {from: distributorID})
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
         const resultBufferOne = await supplyChain.fetchItemBufferOne.call(upc)
@@ -377,7 +377,6 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferTwo[6], distributorID, 'Error: Missing or Invalid distributorID')
         assert.equal(resultBufferTwo[7], retailerID, 'Error: Missing or Invalid retailerID')
         assert.equal(resultBufferTwo[8], consumerID, 'Error: Missing or Invalid consumerID')
-        assert.equal(eventEmitted, true, 'Invalid event emitted')
         
     })
 
