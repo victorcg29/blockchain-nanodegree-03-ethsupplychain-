@@ -160,7 +160,7 @@ contract SupplyChain {
                         originFarmInformation: _originFarmInformation, originFarmLatitude: _originFarmLatitude, 
                         originFarmLongitude: _originFarmLongitude, productID: sku + _upc, productNotes: _productNotes,
                         productPrice: 0, itemState: State.Harvested, distributorID: address(0), retailerID: address(0),
-                        consumerID: address(0)})
+                        consumerID: address(0)});
 
     // Increment sku
     sku = sku + 1;
@@ -293,7 +293,7 @@ contract SupplyChain {
   itemUPC = items[_upc].upc;
   ownerID = items[_upc].ownerID;
   originFarmerID = items[_upc].originFarmerID;
-  originFarmName = items[_upc].originFarmName
+  originFarmName = items[_upc].originFarmName;
   originFarmInformation = items[_upc].originFarmInformation;
   originFarmLatitude = items[_upc].originFarmLatitude;
   originFarmLongitude = items[_upc].originFarmLongitude;
@@ -331,7 +331,7 @@ contract SupplyChain {
     productID = items[_upc].productID;
     productNotes = items[_upc].productNotes;
     productPrice = items[_upc].productPrice;
-    itemState = items[_upc].itemState;
+    itemState = uint(items[_upc].itemState);
     distributorID = items[_upc].distributorID;
     retailerID = items[_upc].retailerID;
     consumerID = items[_upc].consumerID;
