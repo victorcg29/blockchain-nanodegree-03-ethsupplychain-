@@ -6,111 +6,37 @@ This repository containts an Ethereum DApp that demonstrates a Supply Chain flow
 
 ### Activity Diagram
 
-![activity](images/activity_ok.png)
+![activity](uml_diagrams/activity_ok.png)
 
 ### Sequence Diagram
 
-![sequence](images/sequence_ok.png)
+![sequence](uml_diagrams/sequence_ok.png)
 
 ### State Diagram
 
-![state](images/state_ok.png)
+![state](uml_diagrams/state_ok.png)
 
 ### Class (Data Model)
 
+![model](uml_diagrams/data_model.png)
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-Please make sure you've already installed ganache-cli, Truffle and enabled MetaMask extension in your browser.
+## Contract Address
 
 ```
-Give examples (to be clarified)
+Migrations: 0x18925727d78a9e323f9bf17cfe3d5d27368387a0
+FarmerRole: 0x1f7a5044754e1c35a34f33b7ba5cf7d9d6e33f67
+DistributorRole: 0xe8eda34f1f349e54d702aea0fb9e93e4da5a83d6
+RetailerRole: 0xbe1ababe7048d05aa97a442e43868d88015c8b64
+ConsumerRole: 0xce23d6c0fef410b9ff71487c41fd2c5f87496ba7
+SupplyChain: 0xc43c175423e1eb03a85d94d669f0886097c72724
 ```
 
-### Installing
+## Program version numbers
 
-A step by step series of examples that tell you have to get a development env running
+* Node: `6.4.1`
+* Truffle: `4.1.14`
+* web3: `0.20.7`
 
-Clone this repository:
+## Libraries used
 
-```
-git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
-```
-
-Change directory to ```project-6``` folder and install all requisite npm packages (as listed in ```package.json```):
-
-```
-cd project-6
-npm install
-```
-
-Launch Ganache:
-
-```
-ganache-cli -m "spirit supply whale amount human item harsh scare congress discover talent hamster"
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/ganache-cli.png)
-
-In a separate terminal window, Compile smart contracts:
-
-```
-truffle compile
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/truffle_compile.png)
-
-This will create the smart contract artifacts in folder ```build\contracts```.
-
-Migrate smart contracts to the locally running blockchain, ganache-cli:
-
-```
-truffle migrate
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/truffle_migrate.png)
-
-Test smart contracts:
-
-```
-truffle test
-```
-
-All 10 tests should pass.
-
-![truffle test](images/truffle_test.png)
-
-In a separate terminal window, launch the DApp:
-
-```
-npm run dev
-```
-
-## Built With
-
-* [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts
-* [IPFS](https://ipfs.io/) - IPFS is the Distributed Web | A peer-to-peer hypermedia protocol
-to make the web faster, safer, and more open.
-* [Truffle Framework](http://truffleframework.com/) - Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.
-
-
-## Authors
-
-See also the list of [contributors](https://github.com/your/project/contributors.md) who participated in this project.
-
-## Acknowledgments
-
-* Solidity
-* Ganache-cli
-* Truffle
-* IPFS
+* truffle-hdwallet-provider: In order to deploy the contracts to the rinkeby network using infura.
