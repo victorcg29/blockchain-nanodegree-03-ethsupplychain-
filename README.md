@@ -1,6 +1,6 @@
 # Supply chain & data auditing
 
-This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
+This repository containts an Ethereum DApp that demonstrates a Supply Chain flow for a coffee between a Farmer, Distributer, Retailer and Consumer. The user story is similar to any commonly used supply chain process. A Farmer can add items to the inventory system stored in the blockchain. A Distributor can purchase such items from the inventory system. Additionally a Distributor can mark an item as Shipped, a Retailer can mark an item as Receiven and similarly a Buyer can mark an item as Purchased.
 
 The DApp User Interface when running should look like...
 
